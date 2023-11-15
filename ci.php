@@ -93,4 +93,77 @@ $routes->match(['get', 'post'], 'update/(:num)', 'CrudController::update/$1');
   </tbody>
   <!-- ------------------------------------------------------------------------------------ -->
 
+<!-- create -->
+	<form method="post" action="store">
+
+	  <div class="mb-3">
+	    <label for="exampleInputEmail1" class="form-label">Name</label>
+	    <input  class="form-control" name="name" d="exampleInputEmail1" aria-describedby="emailHelp">
+	  </div>
+
+	  <div class="mb-3">
+	    <label for="exampleInputEmail1" class="form-label">Email address</label>
+	    <input  class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+	  </div>
+
+	  <div class="mb-3">
+	    <label for="exampleInputEmail1" class="form-label">Profile Picture</label>
+	    <input  class="form-control" name="image" id="exampleInputEmail1" aria-describedby="emailHelp">
+	  </div>
+
+	  
+	 
+	  <button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+<!-- ----------------------------------------------------------------------------------------------------------- -->
+<!-- edit -->
+	<form method="post" action="<?= site_url('update/' . $edit['id']) ?>">
+
+	  <div class="mb-3">
+	    <label for="exampleInputEmail1" class="form-label">Name</label>
+	    <input  class="form-control" value="<?php echo $edit['name'];?>"name="name" d="exampleInputEmail1" aria-describedby="emailHelp">
+	  </div>
+
+	  <div class="mb-3">
+	    <label for="exampleInputEmail1" class="form-label">Email address</label>
+	    <input  class="form-control" name="email"  value="<?php echo $edit['email'];?>" id="exampleInputEmail1" aria-describedby="emailHelp">
+	  </div>
+
+	  <div class="mb-3">
+	    <label for="exampleInputEmail1" class="form-label">Profile Picture</label>
+	    <input  class="form-control" name="image" id="exampleInputEmail1" aria-describedby="emailHelp">
+	  </div>
+
+	  
+	 
+	  <button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+
+<!-- --------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- list -->
+	<form method="post" action="<?= site_url('update/' . $edit['id']) ?>">
+
+	  <div class="mb-3">
+	    <label for="exampleInputEmail1" class="form-label">Name</label>
+	    <input  class="form-control" value="<?php echo $edit['name'];?>"name="name" d="exampleInputEmail1" aria-describedby="emailHelp">
+	  </div>
+
+	  <div class="mb-3">
+	    <label for="exampleInputEmail1" class="form-label">Email address</label>
+	    <input  class="form-control" name="email"  value="<?php echo $edit['email'];?>" id="exampleInputEmail1" aria-describedby="emailHelp">
+	  </div>
+
+	  <div class="mb-3">
+	    <label for="exampleInputEmail1" class="form-label">Profile Picture</label>
+	    <input  class="form-control" name="image" id="exampleInputEmail1" aria-describedby="emailHelp">
+	  </div>
+
+	  
+	 
+	  <button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+<!-- ------------------------------------------------------------------------------------------------------------------------- -->
+
+
 <form method="post" action="<?= site_url('update/' . $edit['id']) ?>">
