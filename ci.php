@@ -164,6 +164,17 @@ $routes->match(['get', 'post'], 'update/(:num)', 'CrudController::update/$1');
 	  <button type="submit" class="btn btn-primary">Submit</button>
 	</form>
 <!-- ------------------------------------------------------------------------------------------------------------------------- -->
+<?php 
+namespace App\Models;
+use CodeIgniter\Model;
+class CrudModel extends Model
 
+{
+    protected $table = 'crud_list';
+    protected $primaryKey = 'id';
+
+    protected $allowedFields = ['name', 'email', 'image'];
+}
+// ---------------------------------------------------------------------------------------------------------------------------------------
 
 <form method="post" action="<?= site_url('update/' . $edit['id']) ?>">
